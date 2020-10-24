@@ -6,8 +6,8 @@
 POST - http://localhost:8080/job
 {
 	"userId":"34",
-	"jobName": "kkk",
-	"jobDescription":"3dsd4"
+	"jobName": "Developer",
+	"jobDescription":"I a good job"
 
 }
 
