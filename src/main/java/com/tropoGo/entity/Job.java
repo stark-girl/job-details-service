@@ -7,6 +7,8 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 
 import org.hibernate.validator.constraints.Length;
 
@@ -19,12 +21,18 @@ public class Job {
 	@Column
 	private int id;
 	
+	@NotNull
+    @Size(max = 250, min =1)
 	@Column
-	private String jobName;  
+	private String jobName;
 	
+	@NotNull
+    @Size(max = 250, min =1)
 	@Column  
 	private String jobDescription; 
 	
+	@NotNull
+    @Size(max = 250, min =1)
 	@Column  
 	private String userId;
 	

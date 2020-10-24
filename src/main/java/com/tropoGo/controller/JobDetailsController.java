@@ -1,9 +1,8 @@
 package com.tropoGo.controller;
 
 import java.util.List;
-import javax.validation.Valid;
-
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -13,13 +12,16 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.tropoGo.entity.Job;
 import com.tropoGo.service.JobService;
+import com.tropoGo.service.UserService;
 
 @RestController
-
 public class JobDetailsController {
 
 	@Autowired
 	JobService jobService;
+	
+	@Autowired
+	UserService userService;
 
 	@GetMapping("/*")
 	public String healthCheck() {
@@ -32,10 +34,10 @@ public class JobDetailsController {
 	}
 
 	@PostMapping("/job")
-	private int saveStudent(@RequestBody Job job) {
-		System.out.println(job.toString());
+	private ResponseEntity<String> saveJob(@Validated @RequestBody Job job) {
 		jobService.saveOrUpdate(job);
-		//return ResponseEntity.ok("User is valid");
-		return job.getId();
+		return new ResponseEntity<>(String.valueOf(job.getId()), HttpStatus.CREATED);
 	}
+;
+	
 }

@@ -22,7 +22,6 @@ public class JobService {
 	}
 
 	public void saveOrUpdate(Job job) {
-		System.out.println("MOB"+job.toString());
 		jobRepository.save(job);
 	}
 
