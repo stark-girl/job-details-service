@@ -29,5 +29,6 @@ Database- h2(in memory database)
 * Specific message to validation can be added
 * OAuth 2/JWT/ Basic Auth can be added
 * User Entity is not used but added as for convienience
+* JUnits can be added
 
 
