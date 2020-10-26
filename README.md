@@ -30,5 +30,7 @@ Database- h2(in memory database)
 * OAuth 2/JWT/ Basic Auth can be added
 * User Entity is not used but added as for convienience
 * JUnits can be added
+* Specific Exceptions can be added in GlobalException class
+* Exceptions can be thrown on certain condition and can be managed in controller advice
 
 
