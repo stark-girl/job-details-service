@@ -39,6 +39,6 @@ public class JobDetailsController {
 		jobService.saveOrUpdate(job);
 		return new ResponseEntity<>(String.valueOf(job.getId()), HttpStatus.CREATED);
 	}
-;
+
 	
 }
